@@ -1,6 +1,7 @@
 // breedFetcher.js
 
 const request = require('request');
+const breed = process.argv.slice(2);
 const api = 'https://api.thecatapi.com/v1/breeds/search?q=';
 
 const fetchBreedData = (breed) => {
@@ -12,4 +13,4 @@ const fetchBreedData = (breed) => {
   });
 };
 
-fetchBreedData('Siberian');
+fetchBreedData(breed);
